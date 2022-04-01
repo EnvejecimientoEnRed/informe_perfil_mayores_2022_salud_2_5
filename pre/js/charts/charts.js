@@ -24,9 +24,7 @@ export function initChart(iframe) {
     d3.csv('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_salud_2_5/main/data/tasas_morbilidad_hospitalaria_2019.csv', function(error,data) {
         if (error) throw error;
 
-        console.log(data);
-
-        let margin = {top: 10, right: 10, bottom: 20, left: 30},
+        let margin = {top: 10, right: 10, bottom: 20, left: 50},
             width = document.getElementById('chart').clientWidth - margin.left - margin.right,
             height = document.getElementById('chart').clientHeight - margin.top - margin.bottom;
 
@@ -37,7 +35,7 @@ export function initChart(iframe) {
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        let edades = d3.map(data, function(d){return(d.periodo)}).keys();
+        let edades = d3.map(data, function(d){return(d.grupo_edad)}).keys();
         let tipos = ['hombres', 'mujeres'];
         
         let x = d3.scaleBand()
@@ -54,7 +52,7 @@ export function initChart(iframe) {
             .call(xAxis);
 
         let y = d3.scaleLinear()
-            .domain([0, 100])
+            .domain([0, 60000])
             .range([ height, 0 ]);
         svg.append("g")
             .call(d3.axisLeft(y));
@@ -74,7 +72,7 @@ export function initChart(iframe) {
                 .data(data)
                 .enter()
                 .append("g")
-                .attr("transform", function(d) { return "translate(" + x(d.periodo) + ",0)"; })
+                .attr("transform", function(d) { return "translate(" + x(d.grupo_edad) + ",0)"; })
                 .selectAll("rect")
                 .data(function(d) { return tipos.map(function(key) { return {key: key, value: d[key]}; }); })
                 .enter()
