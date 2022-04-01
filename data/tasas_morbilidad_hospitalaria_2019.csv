@@ -1,0 +1,27 @@
+Sexo;grupo_edad;grupo_edad_2;Total
+Hombres;menores de 1 año;< 1 año;38729
+Hombres;de 1 a 4 años;1-4;6213
+Hombres;de 5 a 14 años;5-14;2889
+Hombres;de 15 a 24 años;15-24;3343
+Hombres;de 25 a 34 años;25-34;3644
+Hombres;de 35 a 44 años;35-44;4696
+Hombres;de 45 a 54 años;45-54;7041
+Hombres;de 55 a 64 años;55-64;12596
+Hombres;de 65 a 74 años;65-74;21401
+Hombres;de 75 a 84 años;75-84;33693
+Hombres;de 85 a 89 años;85-89;45835
+Hombres;de 90 a 94 años;90-94;52575
+Hombres;de 95 años y más;95+;52717
+Mujeres;menores de 1 año;< 1 año;31614
+Mujeres;de 1 a 4 años;1-4;4924
+Mujeres;de 5 a 14 años;5-14;2378
+Mujeres;de 15 a 24 años;15-24;5134
+Mujeres;de 25 a 34 años;25-34;11633
+Mujeres;de 35 a 44 años;35-44;9321
+Mujeres;de 45 a 54 años;45-54;6459
+Mujeres;de 55 a 64 años;55-64;8848
+Mujeres;de 65 a 74 años;65-74;13656
+Mujeres;de 75 a 84 años;75-84;22426
+Mujeres;de 85 a 89 años;85-89;33354
+Mujeres;de 90 a 94 años;90-94;40627
+Mujeres;de 95 años y más;95+;42430
