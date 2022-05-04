@@ -14,7 +14,7 @@ let tooltip = d3.select('#tooltip');
 
 export function initChart() {
     ///Lectura de datos
-    d3.csv('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_salud_2_5/main/data/tasas_morbilidad_hospitalaria_2019.csv', function(error,data) {
+    d3.csv('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_salud_2_5/main/data/tasas_morbilidad_hospitalaria_2020.csv', function(error,data) {
         if (error) throw error;
 
         let margin = {top: 12.5, right: 10, bottom: 25, left: 50},
