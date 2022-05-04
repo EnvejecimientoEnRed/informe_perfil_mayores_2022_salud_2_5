@@ -55,11 +55,11 @@ export function initChart() {
             .call(xAxis);
 
         let y = d3.scaleLinear()
-            .domain([0, 60000])
+            .domain([0, 50000])
             .range([ height, 0 ]);
         
         let yAxis = function(svg) {
-            svg.call(d3.axisLeft(y).ticks(6).tickFormat(function(d,i) { return numberWithCommas3(d); }));
+            svg.call(d3.axisLeft(y).ticks(5).tickFormat(function(d,i) { return numberWithCommas3(d); }));
             svg.call(function(g) {
                 g.call(function(g){
                     g.selectAll('.tick line')
@@ -126,7 +126,7 @@ export function initChart() {
                     let currentAge = this.parentNode.classList.value;
 
                     let html = '<p class="chart__tooltip--title">Grupo edad: ' + currentAge.split('_')[1] + '</p>' + 
-                            '<p class="chart__tooltip--text">La tasa de morbilidad hospitalaria para <b>' + d.key.split('_')[0] + '</b> en este grupo de edad es de <b>' + numberWithCommas3(parseFloat(d.value)) + '</b> por cada 100.000 habitantes de este grupo y sexo</p>';
+                            '<p class="chart__tooltip--text">La tasa de morbilidad hospitalaria para <b>' + d.key.split('_')[0] + '</b> en este grupo de edad es de <b>' + numberWithCommas3(parseFloat(d.value)) + '</b></p>';
                     
                     tooltip.html(html);
 
